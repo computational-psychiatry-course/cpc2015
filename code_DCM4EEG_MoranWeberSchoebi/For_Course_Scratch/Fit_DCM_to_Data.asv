@@ -1,0 +1,49 @@
+
+%% Specify Data File : Time Series
+DCM.xY.Dfile = InDfile;
+
+%addpath(genpath('/mnt/nfs/labs/moran/spm'))
+
+DCM.name     = ['DCM_CMM_NMDA',InDfile];
+DCM.xY.y =[];
+DCM.xY.xy =[];
+DCM.xY.modality = 'LFP';
+DCM.xY.Ic = [1];
+
+DCM.options.trials = [1];  %%% placebo deviant, galantamine deviant
+DCM.options.analysis= 'CSD';
+DCM.options.model  = 'CMM_NMDA';
+DCM.options.spatial= 'LFP'
+DCM.options.Tdcm= [1 10000];
+DCM.options.Fdcm= [40 75]; %% Frequency ran
+DCM.options.Rft = 5;
+DCM.options.onset= 64;
+DCM.options.dur = 16;
+DCM.options.Nmodes= 1; % was 8
+DCM.options.h= 1;
+DCM.options.han= 0;
+DCM.options.D= 2; % this is downsample I think
+DCM.options.lock= 0;
+DCM.options.location= 0;
+DCM.options.symmetry= 0;
+% DCM.options.symm= 0;
+
+DCM.A{1} = [0];
+DCM.A{2} = [0];  % DCM.A{1}'
+DCM.A{3} = [0];  % zeros(6,6);
+DCM.C = [1]';
+DCM.B = [];
+%DCM.B{1}= DCM.A{1} + DCM.A{2} ;
+
+DCM.xU.X =[];%% CHANGED THIS TO HAVE NO TRIAL SPECIFIC EFFECTS
+DCM.Lpos = [];
+% DCM.Lpos=[  -42   46   -61   59   -46    46
+%             -22   -14   -32  -25   20   20
+%              7     8    8     8    8   8];
+
+DCM.Sname ={'M1'};
+
+DCM= spm_dcm_csd(DCM)
+save(DCM.name,'DCM')
+
+return
