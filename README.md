@@ -17,5 +17,5 @@ The repository contains the CODE and PRESENTATIONS used in the CPC2015.
 * Please try to cite the work of people who have invested a lot of time in a specific software
 
 ### Contact:
-Dr. Frederike Petzschner
+Dr. Frederike Petzschner  
 petzschner@biomed.ee.ethz.ch
