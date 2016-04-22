@@ -1,6 +1,8 @@
 # README #
 
-This is the official Git repository for the Computational Psychiatry Course 2015
+This is the official Git repository for the Computational Psychiatry Course 2015 organized by the Translational Neuromodeling Unit at ETH and University of Zurich.   
+See our official website for more details: 
+https://www.tnu.ethz.ch/de/teaching/cpcourse/cpcourse2015.html
 
 ### What is this repository for? ###
 
