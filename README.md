@@ -1,4 +1,4 @@
-# README #
+## CPC 2015
 
 This is the official Git repository for the Computational Psychiatry Course 2015 organized by the Translational Neuromodeling Unit at ETH and University of Zurich.   
 See our official website for more details: 
